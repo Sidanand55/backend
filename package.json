@@ -4,12 +4,15 @@
   "description": "a backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "javascript, backend"
   },
   "author": "siddharth anand",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
