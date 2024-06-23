@@ -1,0 +1,15 @@
+{
+  "name": "backend_c",
+  "version": "1.0.0",
+  "description": "a backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "javascript, backend"
+  },
+  "author": "siddharth anand",
+  "license": "ISC"
+}
