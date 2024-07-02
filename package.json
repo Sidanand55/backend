@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "a backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "devDependencies": {
     "nodemon": "^3.1.4",
     "prettier": "^3.3.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "environ": "^3.0.3",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4"
   }
 }
