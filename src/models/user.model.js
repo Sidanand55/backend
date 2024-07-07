@@ -34,7 +34,7 @@ const userSchema= new mongoose.Schema(
         },
         watchHistory:[
             {
-                type: Schema.Types.ObjectId,
+                type: mongoose.Schema.Types.ObjectId,
                 ref: "Video",
             }
         ],
@@ -53,7 +53,7 @@ const userSchema= new mongoose.Schema(
 userSchema.pre("save", async function(next) {
     if(!this.isModified("password")) return next()   // agar yeh nhi krege toh hrr baar password alag encrypt hoga
                                                     // isiliye jb update ho ya first time ho tb hi encrypt krenge
-    this.password= bcrypt.hash(this.password, 10)  
+    this.password= await bcrypt.hash(this.password, 10)  
     next()
 })
 
