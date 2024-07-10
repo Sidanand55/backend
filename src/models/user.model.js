@@ -38,7 +38,7 @@ const userSchema= new mongoose.Schema(
                 ref: "Video",
             }
         ],
-        paswword:{
+        password:{
             type:String,
             required: [true, 'Password is required']   // can also upload a custom message
         },
@@ -78,7 +78,7 @@ userSchema.methods.generateAccessToken= function(){
     )
 }
 
-userSchema.methods.generateRefresToken = function(){
+userSchema.methods.generateRefreshToken = function(){
     return jwt.sign(
         {
             _id: this._id ,  //mongo db se milega
